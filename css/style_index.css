@@ -1,0 +1,414 @@
+/* Resetujem parametre stránky na 0 a nastavím predvolenú výšku na 100%*/
+HTML, body
+{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    max-height: 100%;
+}
+/* Tu začína css pre navigáciu */
+/* Pozícia */
+.topnav
+{
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.644);
+}
+/* časť s logom */
+.nav
+{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.425);
+    height: 55px;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+/* Aktívna adresa stránky */
+#list
+{
+    width: 100%;
+    padding-top: 15px;
+    text-decoration: none;
+}
+/* Odkazy na stránky */
+#mojelinky
+{
+    margin-left: 53.5%;
+    transform: translate(-50%);
+}
+#mojelinky a
+{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 10px ;
+    width: 100px;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+    border-right: solid 1px rgb(107, 107, 107);
+    border-left:solid 1px rgb(107, 107, 107); 
+}
+.topnav a:hover
+{
+    font-size: 26px;
+    background-color: rgba(54, 54, 54, 0.6);
+}
+/* Logo */
+.icon
+{
+    background-color: #42534900;
+    color: rgb(255, 255, 255);
+    border: none;
+    width: 100px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.active
+{
+    background-color: rgba(0, 0, 0, 0.699);
+}
+/* Tu začína ccs na telo stránky */
+body
+{
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 112px;
+    background:linear-gradient(to right,#425349,rgb(170, 104, 5),#425349);
+    max-height: 100%;
+}
+
+/* Tu začína css na main */
+main
+{
+    width: 50%;
+    margin-left: 25%;
+
+}
+/* Banner + text */
+.Banner 
+{
+    position: relative;
+    text-align: center;
+    
+}
+.Banner img
+{
+    border-radius: 1em;
+    width: 100%;
+    max-height: 800px;
+}
+.center
+{
+    top: 45%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+}
+/* Akordeon */
+.akordeon 
+{
+    background-color: rgba(0, 0, 0, 0.562);
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+    border-radius: 1em;
+    border: ridge 10px black;
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+}
+.akordeon:after
+{
+    content: '\02795';
+    font-size: 13px;
+    background-color: white;
+    border-radius: 1em;
+    float: right;
+    margin-left: 5px;
+}
+.akordeon.active:after
+{
+    content: "\2796";
+    font-size: 15px;
+    margin-left: 5px;
+}
+/* Textové pole v akordeone */
+.cast
+{
+    margin: 0 10% 0 10%;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: rgba(58, 57, 57, 0.678);
+    border-radius: 1em;
+    padding: 0 20px ;
+    display: none;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    font-size: 20px;
+    
+}
+.cast h2
+{
+    text-align: center;
+}
+.cast dl
+{
+    text-align: start;
+}
+.cast img
+{   position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 1em;
+    border: 2px ridge black;
+    height: 150px;
+}
+main.active, .akordeon:hover 
+{
+    background-color: rgb(0, 0, 0); 
+    text-decoration: underline;
+    font-size: 25px;
+}
+/* odkaz ako button */
+.btn
+{
+    display: flex;
+    flex-direction: row;
+}
+.btn a
+{
+    padding: 10px 20px ;
+    border-radius: 0.5em;
+    align-self: center;
+    border: solid 1px gray;
+    background-color: black;
+    text-decoration: none;
+}
+.btn a:hover{
+    background-color: rgb(37, 37, 37);
+    cursor: pointer;
+    border:  ridge 4px rgb(0, 0, 0);
+}
+.btn a:visited{
+    text-decoration: none;
+    color: white;
+    
+}
+.btn p{
+    padding-right: 5px;
+    font-weight:bolder ;
+    font-size:1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration:underline;
+}
+/* Tabuľka */
+.table
+{
+    text-align: center;
+}
+.table a,a:visited
+{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border: ridge 4px black;
+    border-radius: 1em;
+    padding: 5px;
+}
+.table a:hover
+{
+    background-color: rgb(0, 0, 0);
+}
+table
+{
+    border: solid 1px black;
+    border-radius: 1em;
+    text-align: start;
+    padding: 10px;
+    text-decoration: underline;
+    margin-left: 50%;
+    transform: translate(-50%);
+    margin-top: 10px;
+}
+th{
+    text-align: start;
+    padding-right: 50px;
+}
+dt
+{
+    font-weight: bold;
+}
+/* FOOTER */
+footer
+{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+    font-size: 15px;
+}
+footer a,a:visited
+{
+text-decoration: none;
+color: white;
+}
+footer a:hover
+{
+    background-color: rgba(71, 71, 71, 0.733);
+    text-decoration: underline;
+}
+.stlpec1
+{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.stlpec1 a
+{
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.stlpec2
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+.stlpec2 a
+{
+    margin-bottom: 20px;
+}
+.stlpec3
+{
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+/* Hamburger popup */
+@media(max-width: 425px)
+{
+#mojelinky
+ {
+    text-align: start;
+    margin-left: 0%;
+    transform: translate(-0%);
+ }
+#mojelinky .odkaz
+ {
+   display:  none;
+ }
+.icon
+ {
+    visibility:visible;
+ }
+}
+@media(min-width: 426px)
+{
+#mojelinky a
+ {
+  display:  inline-block;
+ }
+#mojelinky
+ {
+    text-align: center;
+ }
+.icon
+ {
+    visibility:hidden;
+ }
+}
+/* 4K Monitory */
+@media screen and (min-width:2560px)
+{
+    body
+    {
+        margin-top: 170px;
+    }
+    .center
+    {
+        font-size: 25px;
+    }
+    .akordeon
+    {
+        font-size: 30px;
+    }
+    .cast
+    {
+        font-size: 25px;
+    }
+    .nav
+    {
+        font-size: 35px;
+        height: 100px;
+    }
+    .nav img
+    {
+        width: 100px;
+        height: 100px;
+        
+    }
+    #list
+    {
+        padding-top: 25px
+    }
+    #mojelinky
+    {
+        height: 70px;
+        font-size: 1.5em;
+    }
+    #mojelinky a
+    {
+        width: 150px;
+    }
+}
+@media screen and (max-width:768px)
+{
+    .center
+    {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:425px)
+{
+     main
+     {
+        width: 100%;
+        margin-left: 0%;
+     }
+    .Banner
+    {   
+        max-width: 425px;
+    }
+    .center
+    {
+        font-size: 10px;
+    }
+}
+@media (max-width:320px)
+{
+    html
+    {
+        width: 380px;
+    }
+}

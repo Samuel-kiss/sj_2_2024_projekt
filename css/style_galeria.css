@@ -1,0 +1,262 @@
+/* Resetujem parametre stránky na 0  a setnem výšku na 100%*/
+HTML, body
+{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    height: 100%;
+}
+/* Tu začína css pre navigáciu */
+.topnav
+{
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.644);
+}
+/* časť s logom */
+.nav
+{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.425);
+    height: 55px;
+    font-size: 1.5em;
+}
+.nav a, a:visited
+{
+    text-decoration: none;
+    color: white;
+}
+/* Aktívna adresa stránky */
+#list
+{
+    width: 100%;
+    padding-top: 15px;
+}
+/* Odkazy na stránky */
+#mojelinky
+{
+    margin-left: 53.5%;
+    transform: translate(-50%);
+}
+#mojelinky a
+{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 10px ;
+    width: 100px;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+    border-right: solid 1px rgb(107, 107, 107);
+    border-left:solid 1px rgb(107, 107, 107); 
+}
+.topnav a:hover
+{
+    font-size: 26px;
+    background-color: rgba(54, 54, 54, 0.6);
+}
+/* Logo */
+.icon
+{
+    background-color: #42534900;
+    color: rgb(255, 255, 255);
+    width: 122px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-right: solid 1px rgb(107, 107, 107);
+    border-left:solid 1px rgb(107, 107, 107); 
+}
+.active
+{
+    background-color: rgba(0, 0, 0, 0.699);
+}
+/* Tu začína ccs na telo stránky */
+body 
+{
+    padding-top: 114px;
+    background:linear-gradient(to right,#425349,rgb(170, 104, 5),#425349);
+    font-family: 'Times New Roman', Times, serif;
+}
+/* Tu začína css na main */
+main
+{
+    min-height: 100%;
+}
+/* Zakryjem obrázky */
+.mojestrany {display: none}
+/* Nastavenie obrázkov */
+.slider img 
+{
+    vertical-align: middle;
+    border-radius: 2em;
+    border: ridge  5px black;
+}
+/* Nastavenie slideru */
+.slider
+{
+    max-width: 50%;
+    max-height: 50%;
+    position: relative;
+    bottom: 10px;
+    margin: auto;
+}
+/* Tlačidlá na prechod */
+.pred, .po 
+{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    border-radius: 2em;
+}
+/* Pozícia tlačidla */
+.po
+{
+    right: 0;
+}
+/* Zvýraznenie tlačidla */
+.pred:hover, .po:hover 
+{
+    background-color: rgba(0,0,0,0.8);
+}
+  /* Nastavenie textu */
+.text 
+{
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+/* Nastavenie pozície */
+.pozicia
+{
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+/* FOOTER */
+footer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+    bottom: 0%;
+    font-size: 15px;
+}
+footer a,a:visited
+{
+text-decoration: none;
+color: white;
+}
+footer a:hover
+{
+    background-color: rgba(71, 71, 71, 0.733);
+    text-decoration: underline;
+}
+.stlpec1
+{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.stlpec1 a
+{
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.stlpec2
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+.stlpec2 a
+{
+    margin-bottom: 20px;
+}
+.stlpec3
+{
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+}
+/* Hamburger popup */
+@media(max-width: 425px)
+{
+#mojelinky .odkaz
+ {
+   display:  none;
+ }
+#mojelinky
+ {
+    text-align: start;
+    margin-left: 0%;
+    transform: translate(-0%);
+ }
+.icon
+ {
+    visibility:visible;
+ }
+}
+@media(min-width: 426px)
+{
+#mojelinky a
+ {
+    display:  inline-block;
+ }
+#mojelinky
+ {
+    text-align: center;
+ }
+.icon
+ {
+    visibility:hidden;
+ }
+}
+
+@media screen and (max-width:1440px)
+{
+    .slider img
+    {
+        height: 500px;
+    }
+}
+@media screen and (max-width:425px)
+{
+    .slider
+    {
+        max-width: 300px;
+    }
+ 
+}
+@media (max-width:320px)
+{
+    html
+    {
+        width: 380px;
+    }
+} 

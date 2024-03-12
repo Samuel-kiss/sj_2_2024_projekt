@@ -1,0 +1,273 @@
+/* Resetujem parametre stránky na 0 */
+HTML, body
+{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    height: 100%;
+}
+/* Tu začína css pre navigáciu */
+/* Pozícia */
+.topnav
+{
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.644);
+}
+/* časť s logom */
+.nav
+{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.425);
+    height: 55px;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+.nav a,a:visited
+{
+    color: white;
+    text-decoration: none;
+}
+/* Aktívna adresa stránky */
+#list
+{
+    width: 100%;
+    padding-top: 15px;
+}
+/* Odkazy na stránky */
+#mojelinky
+{
+    margin-left: 53.5%;
+    transform: translate(-50%);
+}
+#mojelinky a
+{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 10px ;
+    width: 100px;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+
+}
+#mojelinky a
+{
+    border-right: solid 1px rgb(107, 107, 107);
+    border-left:solid 1px rgb(107, 107, 107); 
+}
+.topnav a:hover
+{
+    font-size: 26px;
+    background-color: rgba(54, 54, 54, 0.6);
+}
+/* Logo */
+.icon
+{
+    background-color: #42534900;
+    color: rgb(255, 255, 255);
+    border: none;
+    width: 100px;
+    padding: 10px;
+    font-size: 20px;
+}
+.icon:hover
+{
+    background-color:rgba(54, 54, 54, 0.6);
+}
+.active
+{
+    background-color: rgba(0, 0, 0, 0.699);
+}
+/* Tu začína ccs na telo stránky */
+body
+{
+    margin-top: 110px;
+    background:linear-gradient(to right,#425349,rgb(170, 104, 5),#425349);
+    font-family: 'Times New Roman', Times, serif;
+}
+/* Tu začína css na main */
+main
+{
+    width: 50%;
+    margin-left: 25%;
+    height: 100%;
+}
+/* Akordeon */
+.akordeon 
+{
+    background-color: rgba(0, 0, 0, 0.562);
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-radius: 1em;
+    border: ridge 10px black;
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+}
+.akordeon:after
+{
+    content: '\02795';
+    font-size: 13px;
+    background-color: white;
+    border-radius: 1em;
+    float: right;
+    margin-left: 5px;
+}
+.akordeon.active:after
+{
+    content: "\2796";
+    font-size: 15px;
+    margin-left: 5px;
+}
+/* Textové pole v akordeone */
+.cast
+{
+    margin: 0 10% 0 10%;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: rgba(58, 57, 57, 0.678);
+    border-radius: 1em;
+    padding: 0 20px ;
+    display: none;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    font-size: 20px;
+    
+}
+.cast h2
+{
+    text-align: center;
+}
+.cast dl
+{
+    text-align: start;
+}
+main.active, .akordeon:hover 
+{
+    background-color: rgb(0, 0, 0); 
+    text-decoration: underline;
+    font-size: 25px;
+}
+/* FOOTER */
+footer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+    font-size: 15px;
+}
+footer a,a:visited
+{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover
+{
+    background-color: rgba(71, 71, 71, 0.733);
+    text-decoration: underline;
+}
+.stlpec1
+{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.stlpec1 a
+{
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.stlpec2
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+.stlpec2 a
+{
+    margin-bottom: 20px;
+}
+.stlpec3
+{
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+}
+/* Hamburger popup */
+@media(max-width: 425px)
+{
+#mojelinky .odkaz
+ {
+   display:  none;
+ }
+#mojelinky
+ {
+    text-align: start;
+    margin-left: 0%;
+    transform: translate(-0%);
+ }
+.icon
+ {
+    visibility:visible;
+ }
+}
+
+@media(min-width: 426px)
+{
+#mojelinky a
+ {
+  display:  inline-block;
+ }
+#mojelinky
+ {
+    text-align: center;
+ }
+.icon
+ {
+    visibility:hidden;
+ }
+}
+@media(max-width:450px)
+{
+    html
+    {
+        height: 100%;
+        width: 430px;
+    }
+    .udaje
+    {
+        position: relative;
+        width: 80%;
+       
+    }
+} 
+@media (max-width:768px)
+{
+    #mojelinky
+    {
+        width: 390px;
+        height: 47px;
+    }
+    main
+    {
+       width: 100%;
+       margin-left: 0%;
+    }
+}

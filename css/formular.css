@@ -1,0 +1,82 @@
+/* Resetujem parametre stránky na 0 a nastavím predvolenú výšku na 100%*/
+html,body
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100%;
+}
+/* Tu začína ccs na telo stránky */
+body
+{
+    background:linear-gradient(to right,#425349,rgb(170, 104, 5),#425349);
+    font-family:'Times New Roman', Times, serif
+}
+/* Formulár */
+form
+{
+    background-color: rgba(173, 129, 5, 0.507);
+    position: relative;
+    text-align: start;
+    max-width: 500px ;
+    min-height: 600px;
+    border: solid 1px black;
+    border-radius: 1em;    
+    left: 50%;
+    transform: translate(-50%);
+    top: 15%;
+    font-size: 25px;
+    text-align: center;
+    padding: 3%;
+}
+/* ID */
+#meno,#priezvisko,#email
+{
+    width: 335px;
+    border-radius: 0.5em;
+    border: solid 2px black;
+    padding: 15px 0;
+    margin-top:10px;
+}
+#pole
+{
+    margin-top: 10px;
+    width: 335px;
+    border-radius: 0.5em;
+    border: solid 2px black;
+}
+.items
+{
+ width: 333px;
+ margin-left: 50%;
+ transform: translate(-50%);
+ margin-top: 15%;
+
+}
+.items button
+{
+    padding: 10px 30px;
+    border-radius: 1rem;
+    background-color: black;
+    color: white;
+}
+#suhlas 
+{
+    height: 20px;
+    width: 20px;
+}
+.items button:hover
+{
+    cursor: pointer;
+    border: ridge 2px white;
+    font-size: 20px;
+}
+@media(max-width:425px)
+{
+   form
+   {
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 350px;
+   }
+} 
