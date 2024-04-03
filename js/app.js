@@ -1,5 +1,5 @@
 //Hamburger menu
-var linky = document.getElementsByClassName("odkaz");
+var linky = document.getElementsById("odkazy");
 function moja_funkcia()
 {
   for (var linka of linky)

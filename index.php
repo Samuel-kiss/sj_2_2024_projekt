@@ -1,35 +1,6 @@
-<!DOCTYPE html>
-<html lang="sk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Táto stránka obsahuje znalosti a informácie zo sveta počítačov ">
-    <meta name="author" content="Samuel Kiss">
-    <meta name="keywords" content="počítač,informácie,komponenty">
-    <title>Počítače</title>
-    <link rel="stylesheet" href="css/style_index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-    <header>
-      <div class="topnav">
-        <!-- Refresh Stránky -->
-        <div class="nav">
-          <a href="index.html" class="active"> <img src="jpg/logo.png" width="50px" height="50px"></a>
-          <a id="list" href="index.html" class="active"> Info List</a>
-        </div>
-        <!-- linky -->
-        <div id="mojelinky">
-          <a class="odkaz" href="galeria.html">Galeria</a>
-          <a class="odkaz" href="kontakt.html">Kontakt</a>
-          <a class="odkaz" href="o_nas.html">O nás</a>
-          <!-- "Hamburger menu"  -->
-          <button class="icon" onclick="moja_funkcia()" class="fa fa-bars">
-            <i class="fa fa-bars"></i>
-          </button>
-        </div>
-      </div>
-    </header>
+<?php
+include_once('partials/header.php');
+?>
     <main>
       <!-- Banner -->
       <div class="Banner">
@@ -171,24 +142,6 @@
         </div>
       </div>
     </main>
-    <footer>
-      <div class="stlpec1">
-        <p>Rýchle odkazy:</p>
-        <a href="galeria.html">Galéria</a>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="o_nas.html">O nás</a>
-      </div>
-      <div class="stlpec2">
-        <p>Kontakt:</p>
-        <a href="tel:+421908597481">Tel: +421 908 597 481</a>
-        <a href="mailto:kisssamuel37@gmail.com">Mail: kisssamuel37@gmail.com</a>
-      </div>
-      <div class="stlpec3">
-        <p>Dátum vytvorenia:4.12.2023</p>
-        <p>Vytvoril:Samuel Kiss</p>
-        <p>Vytvorené bez webstránok &copy; </p>
-      </div>
-    </footer>
-    <script src="js/app.js"></script>
-</body>
-</html>
+<?php
+  include_once('partials/footer.php');
+?>

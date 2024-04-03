@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="sk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Táto stránka obsahuje formulár ">
-    <meta name="author" content="Samuel Kiss">
-    <meta name="keywords" content="formulár,tlačivo,dotazník">
-    <link rel="stylesheet" href="css/formular.css">
+<?php
+  require('_inc/functions.php');
+  add_stylesheet();
+?>
 
-</head>
 <body>
     <!-- Dotazník -->
     <form id="dotaznik" >
@@ -31,6 +25,4 @@
             <button type="submit" onclick="hlasenie()">Odoslať</button>
         </div>
     </form>
-   <script src="js/app.js"></script>
-</body>
-</html>
+
